@@ -1,18 +1,18 @@
-create table web_db.portfolio.games
+create table tracks
 (
-    game_id        serial primary key,
-    game_name      text,
-    game_name_cn   text,
+    track_id       serial primary key,
+    track_name     text,
+    track_name_cn  text,
     author_id      int4,
     release_date   date,
     description    text,
     description_cn text
 );
 
-create table web_db.portfolio.game_links
+create table track_links
 (
     link_id     serial primary key,
-    game_id     int4,
+    track_id    int4,
     platform_id int4,
     link_url    text
 );
