@@ -25,7 +25,7 @@ select a.track_name,
        a.release_date,
        a.description,
        a.description_cn,
-       c.author_name,
+       a.author_name,
        json_agg(json_build_object('link_name', d.platform_name, 'link_url', b.link_url)) as links
 from (SELECT r.*,
              ARRAY(SELECT n.author_name
@@ -37,4 +37,4 @@ from (SELECT r.*,
          left join portfolio.authors c on c.author_id = any (a.author_id::int4[])
          left join portfolio.platforms d on b.platform_id = d.platform_id
 where release_date = (select max(release_date) from portfolio.tracks)
-group by a.track_id, c.author_id
+group by a.track_name, a.track_name_cn, a.release_date, a.description, a.description_cn, a.author_name;
