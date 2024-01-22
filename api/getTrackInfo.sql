@@ -34,7 +34,6 @@ from (SELECT r.*,
                    ORDER BY a.ord) AS author_name
       FROM web_db.portfolio.tracks r) as a
          left join portfolio.track_links b on a.track_id = b.track_id
-         left join portfolio.authors c on c.author_id = any (a.author_id::int4[])
          left join portfolio.platforms d on b.platform_id = d.platform_id
 where release_date = (select max(release_date) from portfolio.tracks)
 group by a.track_name, a.track_name_cn, a.release_date, a.description, a.description_cn, a.author_name;
