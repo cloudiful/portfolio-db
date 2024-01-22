@@ -1,11 +1,11 @@
-create table platforms
+create table web_db.portfolio.platforms
 (
     platform_id   serial primary key,
     platform_name text,
     platform_icon text
 );
 
-create table platform_links
+create table web_db.portfolio.platform_links
 (
     link_id     serial primary key,
     platform_id integer,

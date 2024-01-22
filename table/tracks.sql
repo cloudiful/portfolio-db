@@ -9,7 +9,7 @@ create table web_db.portfolio.tracks
     description_cn text
 );
 
-create table track_links
+create table web_db.portfolio.track_links
 (
     link_id     serial primary key,
     track_id    int4,
