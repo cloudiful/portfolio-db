@@ -1,4 +1,4 @@
-create table web_db.portfolio.videos
+create table web.portfolio.videos
 (
     video_id        serial primary key,
     video_name      text,
@@ -9,7 +9,7 @@ create table web_db.portfolio.videos
     description_cn text
 );
 
-create table web_db.portfolio.video_links
+create table web.portfolio.video_links
 (
     link_id     serial primary key,
     video_id     int4,

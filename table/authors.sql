@@ -1,4 +1,4 @@
-create table web_db.portfolio.authors
+create table web.portfolio.authors
 (
     author_id      serial primary key,
     author_name    text,
@@ -6,4 +6,4 @@ create table web_db.portfolio.authors
 );
 
 -- add Cloudiful
-INSERT INTO web_db.portfolio.authors (author_id, author_name, author_name_cn) VALUES (1, 'Cloudiful', '云漫');
+INSERT INTO web.portfolio.authors (author_id, author_name, author_name_cn) VALUES (1, 'Cloudiful', '云漫');
